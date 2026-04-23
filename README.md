@@ -31,21 +31,52 @@ Navigate through the properties tab of your bucket and Check Enable static websi
 
 
 ## Step 5: CloudFront distribution
-- Created a cloudFront distribution and set the origin to the S3 bucket (project-alpha-s3).
+- Created a cloudFront distribution allowing web application firewall (WAF) as first line security
+<img width="1836" height="675" alt="create cloudfront" src="https://github.com/user-attachments/assets/0d0d6eb6-5ccb-407b-8e81-1c08992baba9" />
+
+- Set the distribution origin to the S3 bucket (project-alpha-s3).
+<img width="1843" height="696" alt="CF-origin" src="https://github.com/user-attachments/assets/2cd8e6ca-5fec-4a54-81c9-20e11812c313" />
+
 - Enabled default root object to index.html file
-- Created and use origin access control (OAC) to allow bucket content access only with cloudfront.
+<img width="1807" height="687" alt="setting rout objet" src="https://github.com/user-attachments/assets/106c9199-ab92-4f46-a0fb-74d434729508" />
+
+
 
 ## Step 6: Secure S3 (important change)
-- Blocked direct public access to S3
-- Updated bucket policy to grant S3 access only through CloudFront. This blocks public access to S3.
-- Enabled web application firewall (WAF) as first line security
+- Restrict public access to bucket by block direct public access to the S3 bucket
+<img width="1852" height="624" alt="block bucket public access" src="https://github.com/user-attachments/assets/26817872-6531-48bd-a729-66695fdabead" />
+
+- Verify an updated bucket policy to grant S3 access only through CloudFront.
+<img width="1372" height="735" alt="New bucket policy" src="https://github.com/user-attachments/assets/4f4e3d50-348c-4df5-958e-72499fad9270" />
+
+- Created and use origin access control (OAC) to allow bucket content access only with cloudfront.
+<img width="784" height="730" alt="origin access control" src="https://github.com/user-attachments/assets/d3bc8555-e7b2-47dc-a09c-4c0aef14f58e" />
+
 - Use of cloudfront ditribution domain name to access the static webpage
+<img width="1894" height="877" alt="CF-web page view" src="https://github.com/user-attachments/assets/5ef775aa-6831-481c-ad20-920154bfe433" />
 
 ## Step 7: Route 53 DNS
 - Created a hosted zone and registered a domain name using rouute 53 "brandi.click"
-- Created an A (Alias) record, routing traffic to cloudFront distribution
-- Use the domain name "brandi.click" to access the S3 static website 
+<img width="1362" height="742" alt="creating a hosted zone" src="https://github.com/user-attachments/assets/d8e23b1f-1a4d-44fa-a1dd-1d0bb4cef6a5" />
+
+- Created an A (Alias) record to routing traffic
+<img width="1488" height="648" alt="create A-record" src="https://github.com/user-attachments/assets/4934bcb5-e32c-413f-b601-62524f6cc893" />
+
+- Set cloudFront distribution as the endpoint of A record to, route traffic to cloudfront
+<img width="1813" height="706" alt="route traffic to route 53" src="https://github.com/user-attachments/assets/01cfdee8-94d0-45eb-829d-2aceb7382670" />
+
+- Add the domain name "brandi.click" to cloudFront as an alternate domain name  
+<img width="1851" height="690" alt="alternate domain name" src="https://github.com/user-attachments/assets/1bd9bec3-6e98-4688-bf62-a58c65a6bfe5" />
+
+- Request wildcard certificate from AWS Certificate Manager for flexibility and ability to ability to host multiple domains, contrary to SSL/TLS certificate. 
+<img width="1849" height="676" alt="creating certificate" src="https://github.com/user-attachments/assets/29f4918b-87cd-40ce-83bb-4e809ba58212" />
+
+- Add certificate and domain name to the cloudFront distribution
+<img width="1876" height="598" alt="add certificate and domain name" src="https://github.com/user-attachments/assets/dae75055-b3c6-4103-aa09-c139302d1414" />
+
+
+
 ## Step 8: Add HTTPS (SSL security)
-- Request  milcraft certificate from AWS Certificate Manager. 
-- Add the certificate and domain name to cloudFront as alternate domain name  
+
+ 
 ## Use route 53 domain name to access website hosted on S3 through cloudFront distribution and cache sites
