@@ -73,10 +73,7 @@ Navigate through the properties tab of your bucket and Check Enable static websi
 
 - Add certificate and domain name to the cloudFront distribution
 <img width="1876" height="598" alt="add certificate and domain name" src="https://github.com/user-attachments/assets/dae75055-b3c6-4103-aa09-c139302d1414" />
-
-
-
-## Step 8: Add HTTPS (SSL security)
-
  
 ## Use route 53 domain name to access website hosted on S3 through cloudFront distribution and cache sites
+<img width="950" height="446" alt="image" src="https://github.com/user-attachments/assets/6e1185df-f561-487d-bf25-015b49bec1d8" />
+
