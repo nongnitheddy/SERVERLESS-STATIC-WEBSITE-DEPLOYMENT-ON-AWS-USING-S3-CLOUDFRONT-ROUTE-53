@@ -53,7 +53,7 @@ Navigate through the properties tab of your bucket and Check Enable static websi
 <img width="784" height="730" alt="origin access control" src="https://github.com/user-attachments/assets/d3bc8555-e7b2-47dc-a09c-4c0aef14f58e" />
 
 - Use of cloudfront ditribution domain name to access the static webpage
-<img width="1894" height="877" alt="CF-web page view" src="https://github.com/user-attachments/assets/5ef775aa-6831-481c-ad20-920154bfe433" />
+<img width="1891" height="852" alt="CF-web page view" src="https://github.com/user-attachments/assets/3d6f647e-69f2-4109-8628-09aae3eacbfd" />
 
 ## Step 7: Route 53 DNS
 - Created a hosted zone and registered a domain name using rouute 53 "brandi.click"
