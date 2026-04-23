@@ -27,8 +27,7 @@ Navigate through the properties tab of your bucket and Check Enable static websi
 <img width="1831" height="523" alt="static website URL" src="https://github.com/user-attachments/assets/87813c75-d4d9-4117-86c1-7ab3f96b3a07" />
 
 - Copy your bucket Endpoint URL and paste in your browser.
-<img width="1899" height="895" alt="Display web page" src="https://github.com/user-attachments/assets/ae786688-e01c-4225-bc94-73068c6e6a91" />
-
+<img width="1927" height="968" alt="Display web page" src="https://github.com/user-attachments/assets/c9a4bd2b-9c1c-42d2-81de-1047507ca97e" />
 
 ## Step 5: CloudFront distribution
 - Created a cloudFront distribution allowing web application firewall (WAF) as first line security
