@@ -1,4 +1,5 @@
 # SERVERLESS STATIC WEBSITE DEPLOYMENT ON AWS USING S3, CLOUDFRONT & ROUTE 53
+This project demonstrates how to host a static website using AWS S3, CloudFront, and Route 53.
 AWS S3 (Simple Storage Service) is a cloud storage service used to store and retrieve files (called objects) over the internet. It is a highly scalable and durable service which stores data in buckets and is commonly used for backups, images, videos and website files.
 A Static Website is one made of fixed files (HTML, CSS, JavaScript) that do not change based on user input. It provides same content for every user, no database or backend server and could be used for portfolio and landing page. 
 Launching a static website requires creating an s3 bucket on AWS and applying appropriate policy then create a simple website files and store on your computer.
